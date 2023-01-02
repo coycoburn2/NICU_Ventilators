@@ -1,0 +1,892 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59879C4ADEB86DFB86E98039 /* Pods_Coy_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE64140C8A04AA97F5C52E8 /* Pods_Coy_Test.framework */; };
+		9864CDBF7BE588FC9128F174 /* Pods_Coy_Test_Coy_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2615DF859CA18246510A57D5 /* Pods_Coy_Test_Coy_TestUITests.framework */; };
+		C011CDAA292BE2A2004D2B35 /* UIStackView+insertEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C011CDA9292BE2A2004D2B35 /* UIStackView+insertEnum.swift */; };
+		C011CDB2292BE2F4004D2B35 /* UITapGestureRecognizer+didTapAtrributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C011CDB1292BE2F4004D2B35 /* UITapGestureRecognizer+didTapAtrributedText.swift */; };
+		C011CDB7292DBF03004D2B35 /* referencesChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C011CDB6292DBF03004D2B35 /* referencesChild.swift */; };
+		C0460A37291300E4000BD29C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0460A36291300E4000BD29C /* Localizable.strings */; };
+		C0460A4429132336000BD29C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A4329132336000BD29C /* File.swift */; };
+		C0460A4A291323CA000BD29C /* MainString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A49291323CA000BD29C /* MainString.swift */; };
+		C0460A4F2913323A000BD29C /* pcacChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A4E2913323A000BD29C /* pcacChild.swift */; };
+		C0460A6529138C4C000BD29C /* PCAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A6429138C4C000BD29C /* PCAC.swift */; };
+		C0460A6D29138F95000BD29C /* PCSIMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A6C29138F95000BD29C /* PCSIMV.swift */; };
+		C0460A7229138FD1000BD29C /* pcsimvChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A7129138FD1000BD29C /* pcsimvChild.swift */; };
+		C0460A7729156B57000BD29C /* PCPSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A7629156B56000BD29C /* PCPSV.swift */; };
+		C0460A7C29156BB0000BD29C /* pcpsvChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0460A7B29156BB0000BD29C /* pcpsvChild.swift */; };
+		C04B32FE28E948E800E4AE0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B32FD28E948E800E4AE0C /* AppDelegate.swift */; };
+		C04B330028E948E800E4AE0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B32FF28E948E800E4AE0C /* SceneDelegate.swift */; };
+		C04B330228E948E900E4AE0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B330128E948E900E4AE0C /* ViewController.swift */; };
+		C04B330528E948EA00E4AE0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C04B330328E948EA00E4AE0C /* Main.storyboard */; };
+		C04B330728E948FF00E4AE0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04B330628E948FF00E4AE0C /* Assets.xcassets */; };
+		C04B330A28E948FF00E4AE0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C04B330828E948FF00E4AE0C /* LaunchScreen.storyboard */; };
+		C04B331528E9490000E4AE0C /* Coy_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B331428E9490000E4AE0C /* Coy_TestTests.swift */; };
+		C04B332028E9490000E4AE0C /* Coy_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B331F28E9490000E4AE0C /* Coy_TestUITests.swift */; };
+		C057D0B62915BAE70096C9BC /* Videotesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C057D0B52915BAE70096C9BC /* Videotesting.swift */; };
+		C0E86493291855080041BF63 /* hfjvChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E86492291855080041BF63 /* hfjvChild.swift */; };
+		C0E864982918577E0041BF63 /* HFJV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E864972918577E0041BF63 /* HFJV.swift */; };
+		C0E864B82918B2DC0041BF63 /* hfovChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E864B72918B2DC0041BF63 /* hfovChild.swift */; };
+		C0E864BD2918B7BC0041BF63 /* HFOV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E864BC2918B7BC0041BF63 /* HFOV.swift */; };
+		C0E86783293E8BAB0053A6A5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E86782293E8BAB0053A6A5 /* Enums.swift */; };
+		C0E86789293E93D00053A6A5 /* UILabel+constructorTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E86788293E93D00053A6A5 /* UILabel+constructorTemplate.swift */; };
+		C0E8678B293EF6590053A6A5 /* UILabel+searchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E8678A293EF6590053A6A5 /* UILabel+searchLabel.swift */; };
+		C0E8678D293EF6E80053A6A5 /* YTPlayerView+searchPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E8678C293EF6E80053A6A5 /* YTPlayerView+searchPlayer.swift */; };
+		C0E8678F293EF84B0053A6A5 /* String+youtubeID.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E8678E293EF84B0053A6A5 /* String+youtubeID.swift */; };
+		C0E86791293FA0A50053A6A5 /* YTPlayerView+constructorTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E86790293FA0A50053A6A5 /* YTPlayerView+constructorTemplate.swift */; };
+		C0E8679329415AF90053A6A5 /* disclaimerChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E8679229415AF90053A6A5 /* disclaimerChild.swift */; };
+		C0E86795294800D90053A6A5 /* UIButton+searchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E86794294800D90053A6A5 /* UIButton+searchButton.swift */; };
+		C249648522DCCA7F1ED88E1F /* Pods_Coy_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAEDCAE64DF844C07E4DEA5 /* Pods_Coy_TestTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C04B331128E9490000E4AE0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C04B32F228E948E600E4AE0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C04B32F928E948E600E4AE0C;
+			remoteInfo = Coy_Test;
+		};
+		C04B331C28E9490000E4AE0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C04B32F228E948E600E4AE0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C04B32F928E948E600E4AE0C;
+			remoteInfo = Coy_Test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22B44B7716EF03F6C42E6C08 /* Pods-Coy_TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coy_TestTests.debug.xcconfig"; path = "Target Support Files/Pods-Coy_TestTests/Pods-Coy_TestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23117EE1CC748F61DFF53A64 /* Pods-Coy_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coy_Test.debug.xcconfig"; path = "Target Support Files/Pods-Coy_Test/Pods-Coy_Test.debug.xcconfig"; sourceTree = "<group>"; };
+		2615DF859CA18246510A57D5 /* Pods_Coy_Test_Coy_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coy_Test_Coy_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAEDCAE64DF844C07E4DEA5 /* Pods_Coy_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coy_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDBF3993E03D0E03DE2469C /* Pods-Coy_Test-Coy_TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coy_Test-Coy_TestUITests.release.xcconfig"; path = "Target Support Files/Pods-Coy_Test-Coy_TestUITests/Pods-Coy_Test-Coy_TestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6F121D5B5C95BB7B8788D753 /* Pods-Coy_TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coy_TestTests.release.xcconfig"; path = "Target Support Files/Pods-Coy_TestTests/Pods-Coy_TestTests.release.xcconfig"; sourceTree = "<group>"; };
+		AC4B26434918BA3E2F9E039B /* Pods-Coy_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coy_Test.release.xcconfig"; path = "Target Support Files/Pods-Coy_Test/Pods-Coy_Test.release.xcconfig"; sourceTree = "<group>"; };
+		C011CDA9292BE2A2004D2B35 /* UIStackView+insertEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+insertEnum.swift"; sourceTree = "<group>"; };
+		C011CDB1292BE2F4004D2B35 /* UITapGestureRecognizer+didTapAtrributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+didTapAtrributedText.swift"; sourceTree = "<group>"; };
+		C011CDB6292DBF03004D2B35 /* referencesChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencesChild.swift; sourceTree = "<group>"; };
+		C0460A36291300E4000BD29C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C0460A3F29130430000BD29C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C0460A4329132336000BD29C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C0460A49291323CA000BD29C /* MainString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainString.swift; sourceTree = "<group>"; };
+		C0460A4E2913323A000BD29C /* pcacChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pcacChild.swift; sourceTree = "<group>"; };
+		C0460A6429138C4C000BD29C /* PCAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCAC.swift; sourceTree = "<group>"; };
+		C0460A6C29138F95000BD29C /* PCSIMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCSIMV.swift; sourceTree = "<group>"; };
+		C0460A7129138FD1000BD29C /* pcsimvChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pcsimvChild.swift; sourceTree = "<group>"; };
+		C0460A7629156B56000BD29C /* PCPSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCPSV.swift; sourceTree = "<group>"; };
+		C0460A7B29156BB0000BD29C /* pcpsvChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pcpsvChild.swift; sourceTree = "<group>"; };
+		C04B32FA28E948E800E4AE0C /* NICU Ventilators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NICU Ventilators.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04B32FD28E948E800E4AE0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C04B32FF28E948E800E4AE0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C04B330128E948E900E4AE0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C04B330428E948EA00E4AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C04B330628E948FF00E4AE0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C04B330928E948FF00E4AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C04B330B28E948FF00E4AE0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C04B331028E9490000E4AE0C /* NICU VentilatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NICU VentilatorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04B331428E9490000E4AE0C /* Coy_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coy_TestTests.swift; sourceTree = "<group>"; };
+		C04B331628E9490000E4AE0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C04B331B28E9490000E4AE0C /* NICU VentilatorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NICU VentilatorsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04B331F28E9490000E4AE0C /* Coy_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coy_TestUITests.swift; sourceTree = "<group>"; };
+		C04B332128E9490000E4AE0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C057D0B52915BAE70096C9BC /* Videotesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videotesting.swift; sourceTree = "<group>"; };
+		C0E86492291855080041BF63 /* hfjvChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hfjvChild.swift; sourceTree = "<group>"; };
+		C0E864972918577E0041BF63 /* HFJV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFJV.swift; sourceTree = "<group>"; };
+		C0E864B72918B2DC0041BF63 /* hfovChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hfovChild.swift; sourceTree = "<group>"; };
+		C0E864BC2918B7BC0041BF63 /* HFOV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HFOV.swift; sourceTree = "<group>"; };
+		C0E86782293E8BAB0053A6A5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		C0E86788293E93D00053A6A5 /* UILabel+constructorTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+constructorTemplate.swift"; sourceTree = "<group>"; };
+		C0E8678A293EF6590053A6A5 /* UILabel+searchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+searchLabel.swift"; sourceTree = "<group>"; };
+		C0E8678C293EF6E80053A6A5 /* YTPlayerView+searchPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YTPlayerView+searchPlayer.swift"; sourceTree = "<group>"; };
+		C0E8678E293EF84B0053A6A5 /* String+youtubeID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+youtubeID.swift"; sourceTree = "<group>"; };
+		C0E86790293FA0A50053A6A5 /* YTPlayerView+constructorTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YTPlayerView+constructorTemplate.swift"; sourceTree = "<group>"; };
+		C0E8679229415AF90053A6A5 /* disclaimerChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disclaimerChild.swift; sourceTree = "<group>"; };
+		C0E86794294800D90053A6A5 /* UIButton+searchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+searchButton.swift"; sourceTree = "<group>"; };
+		EBE64140C8A04AA97F5C52E8 /* Pods_Coy_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coy_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA662281D1690D2A76E9E864 /* Pods-Coy_Test-Coy_TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coy_Test-Coy_TestUITests.debug.xcconfig"; path = "Target Support Files/Pods-Coy_Test-Coy_TestUITests/Pods-Coy_Test-Coy_TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C04B32F728E948E600E4AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59879C4ADEB86DFB86E98039 /* Pods_Coy_Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04B330D28E9490000E4AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C249648522DCCA7F1ED88E1F /* Pods_Coy_TestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04B331828E9490000E4AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9864CDBF7BE588FC9128F174 /* Pods_Coy_Test_Coy_TestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90382CE615EA6B12849C92F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23117EE1CC748F61DFF53A64 /* Pods-Coy_Test.debug.xcconfig */,
+				AC4B26434918BA3E2F9E039B /* Pods-Coy_Test.release.xcconfig */,
+				FA662281D1690D2A76E9E864 /* Pods-Coy_Test-Coy_TestUITests.debug.xcconfig */,
+				3DDBF3993E03D0E03DE2469C /* Pods-Coy_Test-Coy_TestUITests.release.xcconfig */,
+				22B44B7716EF03F6C42E6C08 /* Pods-Coy_TestTests.debug.xcconfig */,
+				6F121D5B5C95BB7B8788D753 /* Pods-Coy_TestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACA1619366EC67BC37B37F9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBE64140C8A04AA97F5C52E8 /* Pods_Coy_Test.framework */,
+				2615DF859CA18246510A57D5 /* Pods_Coy_Test_Coy_TestUITests.framework */,
+				3CAEDCAE64DF844C07E4DEA5 /* Pods_Coy_TestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C011CDA8292BE221004D2B35 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C011CDA9292BE2A2004D2B35 /* UIStackView+insertEnum.swift */,
+				C011CDB1292BE2F4004D2B35 /* UITapGestureRecognizer+didTapAtrributedText.swift */,
+				C0E86788293E93D00053A6A5 /* UILabel+constructorTemplate.swift */,
+				C0E8678A293EF6590053A6A5 /* UILabel+searchLabel.swift */,
+				C0E8678C293EF6E80053A6A5 /* YTPlayerView+searchPlayer.swift */,
+				C0E8678E293EF84B0053A6A5 /* String+youtubeID.swift */,
+				C0E86790293FA0A50053A6A5 /* YTPlayerView+constructorTemplate.swift */,
+				C0E86794294800D90053A6A5 /* UIButton+searchButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C0460A48291323A3000BD29C /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				C0460A36291300E4000BD29C /* Localizable.strings */,
+				C0460A49291323CA000BD29C /* MainString.swift */,
+				C0460A6429138C4C000BD29C /* PCAC.swift */,
+				C0460A6C29138F95000BD29C /* PCSIMV.swift */,
+				C0460A7629156B56000BD29C /* PCPSV.swift */,
+				C0E864972918577E0041BF63 /* HFJV.swift */,
+				C0E864BC2918B7BC0041BF63 /* HFOV.swift */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		C04B32F128E948E600E4AE0C = {
+			isa = PBXGroup;
+			children = (
+				C04B32FC28E948E800E4AE0C /* Coy_Test */,
+				C04B331328E9490000E4AE0C /* Coy_TestTests */,
+				C04B331E28E9490000E4AE0C /* Coy_TestUITests */,
+				C04B32FB28E948E800E4AE0C /* Products */,
+				90382CE615EA6B12849C92F3 /* Pods */,
+				ACA1619366EC67BC37B37F9F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C04B32FB28E948E800E4AE0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C04B32FA28E948E800E4AE0C /* NICU Ventilators.app */,
+				C04B331028E9490000E4AE0C /* NICU VentilatorsTests.xctest */,
+				C04B331B28E9490000E4AE0C /* NICU VentilatorsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C04B32FC28E948E800E4AE0C /* Coy_Test */ = {
+			isa = PBXGroup;
+			children = (
+				C0E86781293E8B820053A6A5 /* Enumerations */,
+				C011CDA8292BE221004D2B35 /* Extensions */,
+				C0460A48291323A3000BD29C /* Localizables */,
+				C04B32FD28E948E800E4AE0C /* AppDelegate.swift */,
+				C04B32FF28E948E800E4AE0C /* SceneDelegate.swift */,
+				C04B330128E948E900E4AE0C /* ViewController.swift */,
+				C04B330328E948EA00E4AE0C /* Main.storyboard */,
+				C04B330628E948FF00E4AE0C /* Assets.xcassets */,
+				C04B330828E948FF00E4AE0C /* LaunchScreen.storyboard */,
+				C04B330B28E948FF00E4AE0C /* Info.plist */,
+				C0460A4329132336000BD29C /* File.swift */,
+				C0460A4E2913323A000BD29C /* pcacChild.swift */,
+				C0460A7129138FD1000BD29C /* pcsimvChild.swift */,
+				C0460A7B29156BB0000BD29C /* pcpsvChild.swift */,
+				C057D0B52915BAE70096C9BC /* Videotesting.swift */,
+				C0E86492291855080041BF63 /* hfjvChild.swift */,
+				C0E864B72918B2DC0041BF63 /* hfovChild.swift */,
+				C011CDB6292DBF03004D2B35 /* referencesChild.swift */,
+				C0E8679229415AF90053A6A5 /* disclaimerChild.swift */,
+			);
+			path = Coy_Test;
+			sourceTree = "<group>";
+		};
+		C04B331328E9490000E4AE0C /* Coy_TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C04B331428E9490000E4AE0C /* Coy_TestTests.swift */,
+				C04B331628E9490000E4AE0C /* Info.plist */,
+			);
+			path = Coy_TestTests;
+			sourceTree = "<group>";
+		};
+		C04B331E28E9490000E4AE0C /* Coy_TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C04B331F28E9490000E4AE0C /* Coy_TestUITests.swift */,
+				C04B332128E9490000E4AE0C /* Info.plist */,
+			);
+			path = Coy_TestUITests;
+			sourceTree = "<group>";
+		};
+		C0E86781293E8B820053A6A5 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				C0E86782293E8BAB0053A6A5 /* Enums.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C04B32F928E948E600E4AE0C /* NICU Ventilators */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04B332428E9490000E4AE0C /* Build configuration list for PBXNativeTarget "NICU Ventilators" */;
+			buildPhases = (
+				8C291B21AA0BA61D44C82B47 /* [CP] Check Pods Manifest.lock */,
+				C04B32F628E948E600E4AE0C /* Sources */,
+				C04B32F728E948E600E4AE0C /* Frameworks */,
+				C04B32F828E948E600E4AE0C /* Resources */,
+				875BAA367BAFE696F8DF723E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NICU Ventilators";
+			productName = Coy_Test;
+			productReference = C04B32FA28E948E800E4AE0C /* NICU Ventilators.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C04B330F28E9490000E4AE0C /* NICU VentilatorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04B332728E9490000E4AE0C /* Build configuration list for PBXNativeTarget "NICU VentilatorsTests" */;
+			buildPhases = (
+				DCE08E54FC13B18EFF4A2378 /* [CP] Check Pods Manifest.lock */,
+				C04B330C28E9490000E4AE0C /* Sources */,
+				C04B330D28E9490000E4AE0C /* Frameworks */,
+				C04B330E28E9490000E4AE0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C04B331228E9490000E4AE0C /* PBXTargetDependency */,
+			);
+			name = "NICU VentilatorsTests";
+			productName = Coy_TestTests;
+			productReference = C04B331028E9490000E4AE0C /* NICU VentilatorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C04B331A28E9490000E4AE0C /* NICU VentilatorsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04B332A28E9490000E4AE0C /* Build configuration list for PBXNativeTarget "NICU VentilatorsUITests" */;
+			buildPhases = (
+				0FDAA694AED64199EA9E8A82 /* [CP] Check Pods Manifest.lock */,
+				C04B331728E9490000E4AE0C /* Sources */,
+				C04B331828E9490000E4AE0C /* Frameworks */,
+				C04B331928E9490000E4AE0C /* Resources */,
+				A0F6BA4D72CA2405AF26165A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C04B331D28E9490000E4AE0C /* PBXTargetDependency */,
+			);
+			name = "NICU VentilatorsUITests";
+			productName = Coy_TestUITests;
+			productReference = C04B331B28E9490000E4AE0C /* NICU VentilatorsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C04B32F228E948E600E4AE0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					C04B32F928E948E600E4AE0C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					C04B330F28E9490000E4AE0C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C04B32F928E948E600E4AE0C;
+					};
+					C04B331A28E9490000E4AE0C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C04B32F928E948E600E4AE0C;
+					};
+				};
+			};
+			buildConfigurationList = C04B32F528E948E600E4AE0C /* Build configuration list for PBXProject "NICU Ventilators" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C04B32F128E948E600E4AE0C;
+			productRefGroup = C04B32FB28E948E800E4AE0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C04B32F928E948E600E4AE0C /* NICU Ventilators */,
+				C04B330F28E9490000E4AE0C /* NICU VentilatorsTests */,
+				C04B331A28E9490000E4AE0C /* NICU VentilatorsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C04B32F828E948E600E4AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04B330A28E948FF00E4AE0C /* LaunchScreen.storyboard in Resources */,
+				C0460A37291300E4000BD29C /* Localizable.strings in Resources */,
+				C04B330728E948FF00E4AE0C /* Assets.xcassets in Resources */,
+				C04B330528E948EA00E4AE0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04B330E28E9490000E4AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04B331928E9490000E4AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FDAA694AED64199EA9E8A82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coy_Test-Coy_TestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		875BAA367BAFE696F8DF723E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coy_Test/Pods-Coy_Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coy_Test/Pods-Coy_Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coy_Test/Pods-Coy_Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C291B21AA0BA61D44C82B47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coy_Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0F6BA4D72CA2405AF26165A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coy_Test-Coy_TestUITests/Pods-Coy_Test-Coy_TestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coy_Test-Coy_TestUITests/Pods-Coy_Test-Coy_TestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coy_Test-Coy_TestUITests/Pods-Coy_Test-Coy_TestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCE08E54FC13B18EFF4A2378 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coy_TestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C04B32F628E948E600E4AE0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0460A4F2913323A000BD29C /* pcacChild.swift in Sources */,
+				C0460A6D29138F95000BD29C /* PCSIMV.swift in Sources */,
+				C0E86783293E8BAB0053A6A5 /* Enums.swift in Sources */,
+				C0460A7229138FD1000BD29C /* pcsimvChild.swift in Sources */,
+				C011CDAA292BE2A2004D2B35 /* UIStackView+insertEnum.swift in Sources */,
+				C0460A4A291323CA000BD29C /* MainString.swift in Sources */,
+				C0E86795294800D90053A6A5 /* UIButton+searchButton.swift in Sources */,
+				C0E86789293E93D00053A6A5 /* UILabel+constructorTemplate.swift in Sources */,
+				C0E864B82918B2DC0041BF63 /* hfovChild.swift in Sources */,
+				C04B330228E948E900E4AE0C /* ViewController.swift in Sources */,
+				C0460A7C29156BB0000BD29C /* pcpsvChild.swift in Sources */,
+				C0460A4429132336000BD29C /* File.swift in Sources */,
+				C011CDB7292DBF03004D2B35 /* referencesChild.swift in Sources */,
+				C0E864BD2918B7BC0041BF63 /* HFOV.swift in Sources */,
+				C0E8678F293EF84B0053A6A5 /* String+youtubeID.swift in Sources */,
+				C0460A7729156B57000BD29C /* PCPSV.swift in Sources */,
+				C0E8678D293EF6E80053A6A5 /* YTPlayerView+searchPlayer.swift in Sources */,
+				C04B32FE28E948E800E4AE0C /* AppDelegate.swift in Sources */,
+				C0E8678B293EF6590053A6A5 /* UILabel+searchLabel.swift in Sources */,
+				C04B330028E948E800E4AE0C /* SceneDelegate.swift in Sources */,
+				C057D0B62915BAE70096C9BC /* Videotesting.swift in Sources */,
+				C011CDB2292BE2F4004D2B35 /* UITapGestureRecognizer+didTapAtrributedText.swift in Sources */,
+				C0E86493291855080041BF63 /* hfjvChild.swift in Sources */,
+				C0E86791293FA0A50053A6A5 /* YTPlayerView+constructorTemplate.swift in Sources */,
+				C0460A6529138C4C000BD29C /* PCAC.swift in Sources */,
+				C0E864982918577E0041BF63 /* HFJV.swift in Sources */,
+				C0E8679329415AF90053A6A5 /* disclaimerChild.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04B330C28E9490000E4AE0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04B331528E9490000E4AE0C /* Coy_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04B331728E9490000E4AE0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04B332028E9490000E4AE0C /* Coy_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C04B331228E9490000E4AE0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C04B32F928E948E600E4AE0C /* NICU Ventilators */;
+			targetProxy = C04B331128E9490000E4AE0C /* PBXContainerItemProxy */;
+		};
+		C04B331D28E9490000E4AE0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C04B32F928E948E600E4AE0C /* NICU Ventilators */;
+			targetProxy = C04B331C28E9490000E4AE0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C04B330328E948EA00E4AE0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C04B330428E948EA00E4AE0C /* Base */,
+				C0460A3F29130430000BD29C /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C04B330828E948FF00E4AE0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C04B330928E948FF00E4AE0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C04B332228E9490000E4AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "NICU Ventilators";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C04B332328E9490000E4AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "NICU Ventilators";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C04B332528E9490000E4AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23117EE1CC748F61DFF53A64 /* Pods-Coy_Test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W2D974S774;
+				INFOPLIST_FILE = Coy_Test/Info.plist;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coycoburn.CoyTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C04B332628E9490000E4AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC4B26434918BA3E2F9E039B /* Pods-Coy_Test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W2D974S774;
+				INFOPLIST_FILE = Coy_Test/Info.plist;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coycoburn.CoyTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C04B332828E9490000E4AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B44B7716EF03F6C42E6C08 /* Pods-Coy_TestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2D974S774;
+				INFOPLIST_FILE = Coy_TestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coy.coytest.Coy-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NICU Ventilators.app/NICU Ventilators";
+			};
+			name = Debug;
+		};
+		C04B332928E9490000E4AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F121D5B5C95BB7B8788D753 /* Pods-Coy_TestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2D974S774;
+				INFOPLIST_FILE = Coy_TestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coy.coytest.Coy-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NICU Ventilators.app/NICU Ventilators";
+			};
+			name = Release;
+		};
+		C04B332B28E9490000E4AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA662281D1690D2A76E9E864 /* Pods-Coy_Test-Coy_TestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2D974S774;
+				INFOPLIST_FILE = Coy_TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coy.coytest.Coy-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Coy_Test;
+			};
+			name = Debug;
+		};
+		C04B332C28E9490000E4AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DDBF3993E03D0E03DE2469C /* Pods-Coy_Test-Coy_TestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2D974S774;
+				INFOPLIST_FILE = Coy_TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coy.coytest.Coy-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Coy_Test;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C04B32F528E948E600E4AE0C /* Build configuration list for PBXProject "NICU Ventilators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04B332228E9490000E4AE0C /* Debug */,
+				C04B332328E9490000E4AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04B332428E9490000E4AE0C /* Build configuration list for PBXNativeTarget "NICU Ventilators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04B332528E9490000E4AE0C /* Debug */,
+				C04B332628E9490000E4AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04B332728E9490000E4AE0C /* Build configuration list for PBXNativeTarget "NICU VentilatorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04B332828E9490000E4AE0C /* Debug */,
+				C04B332928E9490000E4AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04B332A28E9490000E4AE0C /* Build configuration list for PBXNativeTarget "NICU VentilatorsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04B332B28E9490000E4AE0C /* Debug */,
+				C04B332C28E9490000E4AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C04B32F228E948E600E4AE0C /* Project object */;
+}

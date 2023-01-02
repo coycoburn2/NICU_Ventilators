@@ -1,0 +1,20 @@
+PODS:
+  - iOSDropDown (0.4.0)
+  - youtube-ios-player-helper (1.0.4)
+
+DEPENDENCIES:
+  - iOSDropDown
+  - youtube-ios-player-helper (~> 1.0.4)
+
+SPEC REPOS:
+  trunk:
+    - iOSDropDown
+    - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
+
+PODFILE CHECKSUM: 9ad2b801d42cb250b11d681b9d1e030a7b3eb5c8
+
+COCOAPODS: 1.8.4

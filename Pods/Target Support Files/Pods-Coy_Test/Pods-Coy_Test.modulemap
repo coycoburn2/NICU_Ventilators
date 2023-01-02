@@ -1,0 +1,6 @@
+framework module Pods_Coy_Test {
+  umbrella header "Pods-Coy_Test-umbrella.h"
+
+  export *
+  module * { export * }
+}

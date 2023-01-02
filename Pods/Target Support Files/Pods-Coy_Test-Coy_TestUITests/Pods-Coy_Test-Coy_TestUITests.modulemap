@@ -1,0 +1,6 @@
+framework module Pods_Coy_Test_Coy_TestUITests {
+  umbrella header "Pods-Coy_Test-Coy_TestUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

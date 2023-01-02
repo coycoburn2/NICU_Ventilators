@@ -1,0 +1,9 @@
+
+/* Class = "UIViewController"; title = "Start Screen"; ObjectID = "01J-lp-oVM"; */
+"01J-lp-oVM.title" = "Start Screen";
+
+/* Class = "UIButton"; normalTitle = "Test Button"; ObjectID = "Cgs-6h-yWg"; */
+"Cgs-6h-yWg.normalTitle" = "Test Button";
+
+/* Class = "UITextView"; text = "@disclaimer"; ObjectID = "EC2-Te-Mpj"; */
+"EC2-Te-Mpj.text" = "@disclaimer";
