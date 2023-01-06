@@ -310,7 +310,6 @@ class hfjvChild: UIViewController {
         //scrollStackView.setCustomSpacing(15, after: button)
         
         scrollStackView.spacing = STACK_SPACING
-        scrollStackView.distribution = .fillProportionally
         scrollStackView.sizeToFit()
         scrollStackView.layoutIfNeeded()
         resizeScrollEmbeddedView()
@@ -429,7 +428,6 @@ class hfjvChild: UIViewController {
 
         //print("Height2: ",scrollStackView.frame.height)
         scrollStackView.spacing = STACK_SPACING
-        scrollStackView.distribution = .fillProportionally
         scrollStackView.sizeToFit()
         scrollStackView.layoutIfNeeded()
         print("Height3: ",scrollStackView.frame.height)
@@ -1217,7 +1215,6 @@ class hfjvChild: UIViewController {
         }
         
         stk.spacing = STACK_SPACING
-        stk.distribution = .fillProportionally
         stk.sizeToFit()
         stk.layoutIfNeeded()
     }

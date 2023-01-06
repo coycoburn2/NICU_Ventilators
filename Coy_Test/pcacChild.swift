@@ -252,7 +252,6 @@ class pcacChild: UIViewController {
         }
 
         scrollStackView.spacing = STACK_SPACING
-        scrollStackView.distribution = .fillProportionally
         scrollStackView.sizeToFit()
         scrollStackView.layoutIfNeeded()
         print("Height3: ",scrollStackView.frame.height)
@@ -690,7 +689,6 @@ class pcacChild: UIViewController {
         }
         
         stk.spacing = STACK_SPACING
-        stk.distribution = .fillProportionally
         stk.sizeToFit()
         stk.layoutIfNeeded()
     }
