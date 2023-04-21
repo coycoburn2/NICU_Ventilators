@@ -710,6 +710,11 @@ class pcacChild: UIViewController {
     //Remove Details stack view and subviews and YT player
     func removeSubButtons()
     {
+        if ventMeasStack.isDescendant(of: scrollEmbeddedView)
+        {
+            removeModeStack(&ventMeasStack)
+        }
+        
         if scrollStackView.isDescendant(of: scrollEmbeddedView)
         {
             for view in scrollStackView.subviews

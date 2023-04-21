@@ -636,7 +636,7 @@ class hfjvChild: UIViewController {
             
         case hfjvString.pressureTab.localized:
             //if labelView is UILabel
-            var labelView = searchLabel(labelText: hfjvString.HFJV_settingsPressure.localized, subviewArray: subviewArray)
+            let labelView = searchLabel(labelText: hfjvString.HFJV_settingsPressure.localized, subviewArray: subviewArray)
             
             if labelView.text == hfjvString.HFJV_settingsPressure.localized
             {
@@ -1265,47 +1265,19 @@ class hfjvChild: UIViewController {
         //Handle Mode stacks
         if cpapStack.isDescendant(of: scrollStackView)
         {
-            for view in cpapStack.subviews
-            {
-                cpapStack.removeArrangedSubview(view)
-                view.removeFromSuperview()
-            }
-            cpapStack.sizeToFit()
-            cpapStack.layoutIfNeeded()
-            cpapStack.removeFromSuperview()
+            removeModeStack(&cpapStack)
         }
         if cmvStack.isDescendant(of: scrollStackView)
         {
-            for view in cmvStack.subviews
-            {
-                cmvStack.removeArrangedSubview(view)
-                view.removeFromSuperview()
-            }
-            cmvStack.sizeToFit()
-            cmvStack.layoutIfNeeded()
-            cmvStack.removeFromSuperview()
+            removeModeStack(&cmvStack)
         }
         if servoStack.isDescendant(of: scrollStackView)
         {
-            for view in servoStack.subviews
-            {
-                servoStack.removeArrangedSubview(view)
-                view.removeFromSuperview()
-            }
-            servoStack.sizeToFit()
-            servoStack.layoutIfNeeded()
-            servoStack.removeFromSuperview()
+            removeModeStack(&servoStack)
         }
         if monitorStack.isDescendant(of: scrollStackView)
         {
-            for view in monitorStack.subviews
-            {
-                monitorStack.removeArrangedSubview(view)
-                view.removeFromSuperview()
-            }
-            monitorStack.sizeToFit()
-            monitorStack.layoutIfNeeded()
-            monitorStack.removeFromSuperview()
+            removeModeStack(&monitorStack)
         }
     }
 }

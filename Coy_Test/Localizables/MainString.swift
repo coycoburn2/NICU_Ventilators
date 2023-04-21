@@ -63,6 +63,9 @@ enum MainString: String, CaseIterable {
     case sensTab
     case lowTidalTab
     
+    case helperLabel
+    case helperBody
+    
     var localized: String {
         NSLocalizedString(self.rawValue, comment: "")
     }

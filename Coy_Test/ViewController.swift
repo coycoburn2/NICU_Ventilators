@@ -11,8 +11,9 @@ class ViewController: UIViewController {
     
         
     @IBOutlet weak var mainTitleButton: UIButton!
-    @IBOutlet weak var disclaimerButton: UIButton!
-    @IBOutlet weak var referencesButton: UIButton!
+    @IBOutlet var disclaimerButton: UIButton!
+    @IBOutlet var referencesButton: UIButton!
+    @IBOutlet weak var bottomStackOptions: UIStackView!
     
     //Buttons for navitgating the decision tree
     @IBOutlet var optionOne: UIButton!
@@ -29,6 +30,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var hfovContainer: UIView!
     @IBOutlet weak var refsContainer: UIView!
     @IBOutlet weak var disContainer: UIView!
+    @IBOutlet weak var helperContainer: UIView!
+    
+    var tapGesture:UITapGestureRecognizer!
     
     var prevConfiguration = UIButton.Configuration.gray()
     
@@ -57,6 +61,52 @@ class ViewController: UIViewController {
         hfovContainer.alpha = 0
         disContainer.alpha = 0
         refsContainer.alpha = 0
+        
+        //Except for Helper Intro
+        //helperContainer.alpha = 1
+        buildHelper()
+    }
+    
+    //Func: tapLabel
+    func buildHelper() {
+        stackOptions.removeArrangedSubview(optionOne)
+        optionOne?.removeFromSuperview()
+        stackOptions.removeArrangedSubview(optionTwo)
+        optionTwo?.removeFromSuperview()
+        stackOptions.removeArrangedSubview(optionThree)
+        optionThree?.removeFromSuperview()
+        
+        bottomStackOptions.removeArrangedSubview(disclaimerButton)
+        disclaimerButton?.removeFromSuperview()
+        bottomStackOptions.removeArrangedSubview(referencesButton)
+        referencesButton?.removeFromSuperview()
+        
+        //stackOptions.addArrangedSubview(prevButton)
+        helperContainer.alpha = 1
+        
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapHelper(gesture:)))
+        tapGesture.numberOfTapsRequired = 1
+        //CC TODO split this into all UIActions of menu list
+        //self.scrollDetails.isUserInteractionEnabled = true
+        self.helperContainer.addGestureRecognizer(tapGesture)
+        self.helperContainer.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func tapHelper(gesture: UITapGestureRecognizer) {
+        
+        self.helperContainer.alpha = 0
+        
+        stackOptions.insertArrangedSubview(optionOne, at: 0)
+        stackOptions.insertArrangedSubview(optionTwo, at: 1)
+        stackOptions.insertArrangedSubview(optionThree, at: 2)
+        
+        optionOne?.setTitle(MainString.conVent.localized, for: .normal)
+        optionTwo?.setTitle(MainString.hfjv.localized, for: .normal)
+        optionThree?.setTitle(MainString.hfov.localized, for: .normal)
+        
+        bottomStackOptions.insertArrangedSubview(disclaimerButton, at: 0)
+        bottomStackOptions.insertArrangedSubview(referencesButton, at: 1)
+        
     }
     
     func buildPrevButton(){
@@ -362,7 +412,5 @@ class ViewController: UIViewController {
             disContainer.alpha = 0
         }
     }
-    
-    
 }
 

@@ -12,7 +12,7 @@
 		<key>Pods-Coy_Test.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Pods-Coy_TestTests.xcscheme</key>
 		<dict>

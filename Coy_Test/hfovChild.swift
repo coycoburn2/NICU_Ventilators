@@ -646,7 +646,6 @@ class hfovChild: UIViewController{
         let buttonTitleString = sender.titleLabel?.text
 
         let monitorArray = monitorStack.subviews
-        let scrollArray = scrollStackView.subviews
         
         let stacks = [monitorStack, scrollStackView]
         

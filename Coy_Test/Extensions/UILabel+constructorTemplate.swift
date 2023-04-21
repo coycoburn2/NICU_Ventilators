@@ -16,7 +16,7 @@ let LABEL_WRAP = 0
 func stackLabel(text: String,_ stk: UIStackView) -> UILabel
 {
     //NumOfLines wraps content. SetContentComp ensures label shows all of text
-    let guide = stk.safeAreaLayoutGuide
+    //let guide = stk.safeAreaLayoutGuide
     let newLabel = UILabel()
     newLabel.text = text
     newLabel.numberOfLines = LABEL_WRAP

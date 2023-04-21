@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,7 +13,7 @@
         <!--Disclaimer Child-->
         <scene sceneID="3UL-qG-Tbg">
             <objects>
-                <viewController id="eid-mU-Qk2" customClass="disclaimerChild" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eid-mU-Qk2" customClass="disclaimerChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ah-O9-c7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,10 +52,83 @@
             </objects>
             <point key="canvasLocation" x="-1281" y="289"/>
         </scene>
+        <!--Helper Intro Child-->
+        <scene sceneID="QVf-r6-lj7">
+            <objects>
+                <viewController id="RGr-U3-MXc" customClass="helperIntroChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d2Y-Fr-z0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="715"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-sV-PeF" userLabel="HelperIntro">
+                                <rect key="frame" x="0.0" y="48" width="414" height="20"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" name="SubFore"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooN-N7-K12">
+                                <rect key="frame" x="0.0" y="83" width="414" height="632"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClF-NN-vLx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyf-xs-p7m" userLabel="helperBody">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="17.5"/>
+                                                <color key="backgroundColor" name="NICU_Background"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                <color key="textColor" name="SubFore"/>
+                                                <color key="highlightedColor" name="Menu"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ButtonBack"/>
+                                        <constraints>
+                                            <constraint firstItem="Tyf-xs-p7m" firstAttribute="top" secondItem="ClF-NN-vLx" secondAttribute="top" id="0pg-D6-Qmm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tyf-xs-p7m" secondAttribute="trailing" constant="10" id="LO2-Bp-ssk"/>
+                                            <constraint firstItem="Tyf-xs-p7m" firstAttribute="centerX" secondItem="ClF-NN-vLx" secondAttribute="centerX" id="Rv0-Q2-JqD"/>
+                                            <constraint firstAttribute="height" constant="2000" id="RyU-XU-zvZ"/>
+                                            <constraint firstItem="Tyf-xs-p7m" firstAttribute="leading" secondItem="ClF-NN-vLx" secondAttribute="leading" constant="10" id="aV2-2U-dz2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KTl-o8-YFb" firstAttribute="trailing" secondItem="ClF-NN-vLx" secondAttribute="trailing" id="IIS-Qr-ngD"/>
+                                    <constraint firstItem="ClF-NN-vLx" firstAttribute="bottom" secondItem="KTl-o8-YFb" secondAttribute="bottom" id="KJ6-ZT-AuL"/>
+                                    <constraint firstItem="ClF-NN-vLx" firstAttribute="leading" secondItem="KTl-o8-YFb" secondAttribute="leading" id="c9a-x7-xww"/>
+                                    <constraint firstItem="ClF-NN-vLx" firstAttribute="top" secondItem="KTl-o8-YFb" secondAttribute="top" id="kSc-iD-qtP"/>
+                                    <constraint firstItem="ClF-NN-vLx" firstAttribute="width" secondItem="4m8-h1-9O1" secondAttribute="width" id="t5Y-xd-nNr"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="KTl-o8-YFb"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="4m8-h1-9O1"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5KO-ca-SUf"/>
+                        <color key="backgroundColor" name="ButtonBack"/>
+                        <constraints>
+                            <constraint firstItem="5KO-ca-SUf" firstAttribute="bottom" secondItem="ooN-N7-K12" secondAttribute="bottom" id="OcI-2Y-sce"/>
+                            <constraint firstItem="ooN-N7-K12" firstAttribute="top" secondItem="EtS-sV-PeF" secondAttribute="bottom" constant="15" id="V8D-j7-R4Q"/>
+                            <constraint firstItem="5KO-ca-SUf" firstAttribute="trailing" secondItem="EtS-sV-PeF" secondAttribute="trailing" id="Wss-C8-Ald"/>
+                            <constraint firstItem="5KO-ca-SUf" firstAttribute="trailing" secondItem="ooN-N7-K12" secondAttribute="trailing" id="d0A-83-HRZ"/>
+                            <constraint firstItem="ooN-N7-K12" firstAttribute="leading" secondItem="5KO-ca-SUf" secondAttribute="leading" id="lHP-Yc-15W"/>
+                            <constraint firstItem="EtS-sV-PeF" firstAttribute="top" secondItem="5KO-ca-SUf" secondAttribute="top" id="v1E-dg-HaP"/>
+                            <constraint firstItem="EtS-sV-PeF" firstAttribute="leading" secondItem="5KO-ca-SUf" secondAttribute="leading" id="wVE-Lj-nG5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="helperBody" destination="Tyf-xs-p7m" id="tPW-8K-cnl"/>
+                        <outlet property="helperEmbeddedHeight" destination="RyU-XU-zvZ" id="gag-io-8B7"/>
+                        <outlet property="helperEmbeddedView" destination="ClF-NN-vLx" id="0GL-83-1hM"/>
+                        <outlet property="helperIntro" destination="EtS-sV-PeF" id="TYB-ZC-60Z"/>
+                        <outlet property="helperScroll" destination="ooN-N7-K12" id="COy-Cp-acf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pdr-NY-Z8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-587" y="129"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,6 +254,12 @@
                                     <segue destination="eid-mU-Qk2" kind="embed" id="Ne9-2P-4bY"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S02-Xt-sbj" userLabel="helperContainer">
+                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
+                                <connections>
+                                    <segue destination="RGr-U3-MXc" kind="embed" id="CeK-aN-lbb"/>
+                                </connections>
+                            </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Avg-4q-fCJ" userLabel="BottomStack">
                                 <rect key="frame" x="0.0" y="753" width="414" height="60"/>
                                 <subviews>
@@ -215,6 +293,7 @@
                             <constraint firstItem="bFx-ad-UdB" firstAttribute="bottom" secondItem="Avg-4q-fCJ" secondAttribute="top" id="39G-3J-oIG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aMB-aD-zv7" secondAttribute="trailing" id="4Tr-Uv-VZN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bFx-ad-UdB" secondAttribute="trailing" id="4yj-Wj-XGv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S02-Xt-sbj" secondAttribute="trailing" id="69E-Fd-ebU"/>
                             <constraint firstItem="wme-mr-AdL" firstAttribute="top" secondItem="1w6-T0-mQ5" secondAttribute="bottom" id="6Nb-RG-cOE"/>
                             <constraint firstItem="GdD-D8-ey5" firstAttribute="bottom" secondItem="Avg-4q-fCJ" secondAttribute="top" id="9VH-m9-t0W"/>
                             <constraint firstItem="aMB-aD-zv7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BrQ-Ip-Okv"/>
@@ -228,10 +307,12 @@
                             <constraint firstItem="dd5-7a-dDb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vto-0M-QNi"/>
                             <constraint firstItem="dd5-7a-dDb" firstAttribute="bottom" secondItem="Avg-4q-fCJ" secondAttribute="top" id="WAa-an-N5Z"/>
                             <constraint firstItem="VfZ-4T-1YP" firstAttribute="bottom" secondItem="Avg-4q-fCJ" secondAttribute="top" id="WcJ-F5-flQ"/>
+                            <constraint firstItem="S02-Xt-sbj" firstAttribute="bottom" secondItem="Avg-4q-fCJ" secondAttribute="bottom" id="WhA-rJ-rYg"/>
                             <constraint firstItem="zHT-fz-Naf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xcs-J3-O4H"/>
                             <constraint firstItem="OvJ-PI-DX6" firstAttribute="top" secondItem="1w6-T0-mQ5" secondAttribute="bottom" id="ZPU-Sd-Y70"/>
                             <constraint firstItem="GdD-D8-ey5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aBI-5B-MIe"/>
                             <constraint firstItem="aMB-aD-zv7" firstAttribute="top" secondItem="1w6-T0-mQ5" secondAttribute="bottom" id="amO-Pr-OSc"/>
+                            <constraint firstItem="S02-Xt-sbj" firstAttribute="top" secondItem="1w6-T0-mQ5" secondAttribute="top" id="bYm-bM-AyT"/>
                             <constraint firstItem="OvJ-PI-DX6" firstAttribute="bottom" secondItem="Avg-4q-fCJ" secondAttribute="top" id="dAH-7Z-Sr1"/>
                             <constraint firstItem="Avg-4q-fCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dPT-pD-G35"/>
                             <constraint firstItem="OvJ-PI-DX6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g5Z-i3-Fe0"/>
@@ -241,6 +322,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VfZ-4T-1YP" secondAttribute="trailing" id="kSL-0H-JcO"/>
                             <constraint firstItem="VfZ-4T-1YP" firstAttribute="top" secondItem="1w6-T0-mQ5" secondAttribute="bottom" id="kZy-mm-62J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GdD-D8-ey5" secondAttribute="trailing" id="mdf-No-jN5"/>
+                            <constraint firstItem="S02-Xt-sbj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oK6-LR-XmB"/>
                             <constraint firstItem="dd5-7a-dDb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="opy-2P-ayW"/>
                             <constraint firstItem="wme-mr-AdL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="owv-Bz-6Ma"/>
                             <constraint firstItem="aMB-aD-zv7" firstAttribute="bottom" secondItem="Avg-4q-fCJ" secondAttribute="top" id="sGn-Og-F2j"/>
@@ -257,8 +339,10 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bottomStackOptions" destination="Avg-4q-fCJ" id="cdd-Ld-bKN"/>
                         <outlet property="disContainer" destination="OvJ-PI-DX6" id="rxG-tk-mxK"/>
                         <outlet property="disclaimerButton" destination="s1w-Xl-nAE" id="hEQ-8E-eQG"/>
+                        <outlet property="helperContainer" destination="S02-Xt-sbj" id="AnJ-Yt-CfA"/>
                         <outlet property="hfjvContainer" destination="dd5-7a-dDb" id="Bjj-qP-KbT"/>
                         <outlet property="hfovContainer" destination="od3-9E-BSD" id="rCf-dF-2Ct"/>
                         <outlet property="mainTitleButton" destination="zHT-fz-Naf" id="5M5-hC-eiL"/>
@@ -281,7 +365,7 @@
         <!--Pcac Child-->
         <scene sceneID="T9c-8b-Thu">
             <objects>
-                <viewController storyboardIdentifier="pcacChildID" id="QfS-8w-ONh" customClass="pcacChild" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pcacChildID" id="QfS-8w-ONh" customClass="pcacChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KG6-5T-KUy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,7 +443,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuButton" destination="hrn-9S-fee" id="9dY-HX-irN"/>
+                        <outlet property="menuButton" destination="hrn-9S-fee" id="Ftx-x1-YK6"/>
                         <outlet property="scrollDetails" destination="ixQ-Rk-jTo" id="Sbc-6G-Cl3"/>
                         <outlet property="scrollEmbeddedHeight" destination="ddx-ff-FmG" id="mwF-mi-HER"/>
                         <outlet property="scrollEmbeddedView" destination="We2-7Z-zyo" id="ifM-EX-hyc"/>
@@ -373,7 +457,7 @@
         <!--Pcsimv Child-->
         <scene sceneID="DhU-NF-sgw">
             <objects>
-                <viewController id="lJg-bi-8XW" customClass="pcsimvChild" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lJg-bi-8XW" customClass="pcsimvChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oYo-k0-6Za">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -451,7 +535,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuButton" destination="p7C-iv-YXk" id="sQh-JC-HVJ"/>
+                        <outlet property="menuButton" destination="p7C-iv-YXk" id="J3d-D1-aTw"/>
                         <outlet property="scrollDetails" destination="DR3-R5-ZWM" id="F56-mr-vJb"/>
                         <outlet property="scrollEmbeddedHeight" destination="mvf-HW-GrN" id="jaO-gh-jqK"/>
                         <outlet property="scrollEmbeddedView" destination="dJp-MI-sBl" id="bAc-7E-Din"/>
@@ -465,7 +549,7 @@
         <!--Pcpsv Child-->
         <scene sceneID="Ycy-Ey-oo9">
             <objects>
-                <viewController id="eRX-Ig-vmA" customClass="pcpsvChild" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eRX-Ig-vmA" customClass="pcpsvChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zed-vi-Qi2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -542,7 +626,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuButton" destination="cPZ-Tf-93G" id="pz3-ZQ-p2g"/>
+                        <outlet property="menuButton" destination="cPZ-Tf-93G" id="euU-Kd-tmZ"/>
                         <outlet property="scrollDetails" destination="chl-3y-YU0" id="jYM-Sd-tEx"/>
                         <outlet property="scrollEmbeddedHeight" destination="0Og-qm-DRA" id="qKT-B8-IAT"/>
                         <outlet property="scrollEmbeddedView" destination="QCC-8S-Hna" id="bPL-Ig-GV5"/>
@@ -556,7 +640,7 @@
         <!--Video Testing-->
         <scene sceneID="SCz-Lf-qtX">
             <objects>
-                <viewController id="ETf-g7-Axf" customClass="videoTesting" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ETf-g7-Axf" customClass="videoTesting" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJc-WG-4l8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -680,7 +764,7 @@
         <!--Hfjv Child-->
         <scene sceneID="deo-s2-mzf">
             <objects>
-                <viewController id="Aj2-pD-h0N" customClass="hfjvChild" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Aj2-pD-h0N" customClass="hfjvChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fTm-0U-a39">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -693,7 +777,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un4-5l-sci" userLabel="Menu">
-                                <rect key="frame" x="159.5" y="83" width="95.5" height="30"/>
+                                <rect key="frame" x="159.5" y="83" width="95" height="30"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button">
@@ -772,7 +856,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuButton" destination="un4-5l-sci" id="cE2-Jz-SBH"/>
+                        <outlet property="menuButton" destination="un4-5l-sci" id="Ysn-Nu-Vgh"/>
                         <outlet property="playerDetails" destination="Mzn-9Y-55Q" id="Fek-xI-bbZ"/>
                         <outlet property="scrollDetails" destination="JsF-Pf-GHl" id="oI9-ax-CDi"/>
                         <outlet property="scrollEmbeddedHeight" destination="1lJ-8J-k1n" id="MkR-kO-ssy"/>
@@ -787,7 +871,7 @@
         <!--Hfov Child-->
         <scene sceneID="PtW-wU-6b6">
             <objects>
-                <viewController id="M3P-fl-IVd" customClass="hfovChild" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M3P-fl-IVd" customClass="hfovChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OhV-EI-C4W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -799,7 +883,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOM-P2-jMV" userLabel="Menu">
-                                <rect key="frame" x="159.5" y="83" width="95.5" height="30"/>
+                                <rect key="frame" x="159.5" y="83" width="95" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" name="ButtonBack"/>
                                 </state>
@@ -865,7 +949,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuButton" destination="yOM-P2-jMV" id="pAw-OY-77Y"/>
+                        <outlet property="menuButton" destination="yOM-P2-jMV" id="mFN-Uu-J7p"/>
                         <outlet property="scrollDetails" destination="HXq-pr-eIT" id="cG4-sh-deR"/>
                         <outlet property="scrollEmbeddedHeight" destination="SWY-Ky-4c5" id="8qX-6z-d2t"/>
                         <outlet property="scrollEmbeddedView" destination="80P-XI-3pA" id="HzQ-1e-G0A"/>
@@ -879,7 +963,7 @@
         <!--References Child-->
         <scene sceneID="TBV-pr-c8C">
             <objects>
-                <viewController id="siD-zy-yDO" customClass="referencesChild" customModule="Coy_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="siD-zy-yDO" customClass="referencesChild" customModule="NICU_Ventilators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ybk-Sg-N2l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -927,16 +1011,19 @@
     </scenes>
     <resources>
         <namedColor name="ButtonBack">
-            <color red="1" green="0.41879170800848498" blue="0.54331682954506677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.41899999976158142" blue="0.5429999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ButtonFore">
             <color red="0.54338357886489552" green="0.54338357886489552" blue="0.54338357886489552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Menu">
+            <color red="0.85500001907348633" green="0.73799997568130493" blue="0.64200001955032349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="NICU_Background">
-            <color red="0.8697354842205437" green="0.8697354842205437" blue="0.8697354842205437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.87000000476837158" green="0.87000000476837158" blue="0.87000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SubFore">
-            <color red="0.54338357886489552" green="0.54338357886489552" blue="0.54338357886489552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5429999828338623" green="0.5429999828338623" blue="0.5429999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
