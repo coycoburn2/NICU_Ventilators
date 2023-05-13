@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 //If PCSIMV locals indexes are changed, update this macro
 let PCSIMV_SETTINGS_INDEX = 4
@@ -69,25 +70,31 @@ class pcsimvChild: UIViewController {
     
     func addMenuItems() -> UIMenu
     {
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapLabel(gesture:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapGesture)
+        self.scrollDetails.addGestureRecognizer(doubleTapGesture)
+        self.scrollDetails.isUserInteractionEnabled = true
+ 
         let menuItems = UIMenu(title: "", options: .displayInline, children: [
             
             UIAction(title: MainString.What.localized, handler: { (_) in
                 self.scrollDetails.text = pcsimvString.PCSIMV_what.localized
                 self.removeSubButtons()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.resizeScrollEmbeddedView()
             }),
             
             UIAction(title: MainString.When.localized, handler: { (_) in
                 self.scrollDetails.text = pcsimvString.PCSIMV_when.localized
                 self.removeSubButtons()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.resizeScrollEmbeddedView()
             }),
             
             UIAction(title: MainString.Settings.localized, handler: { (_) in
                 self.scrollDetails.text = ""
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.removeSubButtons()
                 let tabText = MainString.Settings.localized
                 self.createSubButtons(buttonText: tabText)
@@ -95,7 +102,7 @@ class pcsimvChild: UIViewController {
             
             UIAction(title: MainString.Management.localized, handler: { (_) in
                 self.scrollDetails.text = ""
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.removeSubButtons()
                 let tabText = MainString.Management.localized
                 self.createSubButtons(buttonText: tabText)
@@ -104,7 +111,7 @@ class pcsimvChild: UIViewController {
             UIAction(title: MainString.Tips.localized, handler: { (_) in
                 self.scrollDetails.text = ""
                 self.removeSubButtons()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.resizeScrollEmbeddedView()
                 let tabText = MainString.Tips.localized
                 self.createSubButtons(buttonText: tabText)
@@ -112,6 +119,17 @@ class pcsimvChild: UIViewController {
         ])
         
         return menuItems
+    }
+    
+    //Func: tapLabel
+    @IBAction func tapLabel(gesture: UITapGestureRecognizer) {
+        let string = self.scrollDetails.text
+        let tmp = string?.replacingOccurrences(of: "•", with: "")
+
+        ViewController.synthesizer.stopSpeaking(at: .immediate)
+        ViewController.utterance = AVSpeechUtterance(string: tmp!)
+        ViewController.synthesizer.speak(ViewController.utterance)
+        ViewController.synthesizer.pauseSpeaking(at: .word)
     }
     
     func resizeScrollEmbeddedView()

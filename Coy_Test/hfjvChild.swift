@@ -7,6 +7,7 @@
 
 import Foundation
 import youtube_ios_player_helper
+import AVFAudio
 
 //If HFJV locals indexes are changed, update this macro
 let HFJV_SETTINGS_INDEX = 8
@@ -72,7 +73,7 @@ class hfjvChild: UIViewController {
     //UIButton.Configuration is for iOS 15 or greater
     var buttonConfig = UIButton.Configuration.gray()
     var subTabConfig = UIButton.Configuration.gray()
-    
+        
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -102,24 +103,36 @@ class hfjvChild: UIViewController {
         
         //Set up the scrollDetails to be "clickable"
         //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.checkForUrlClick))
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapLabel(gesture:)))
         //CC TODO split this into all UIActions of menu list
         //self.scrollDetails.isUserInteractionEnabled = true
-        self.scrollDetails.addGestureRecognizer(tapGesture)
-        self.scrollDetails.isUserInteractionEnabled = false
-        
         createOverview()
     }
     
     func addMenuItems() -> UIMenu
     {
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapManualsLabel(gesture:)))
+        singleTapGesture.numberOfTapsRequired = 1
+        view.addGestureRecognizer(singleTapGesture)
+
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapLabel(gesture:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapGesture)
+
+        singleTapGesture.require(toFail: doubleTapGesture)
+        
+        //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapLabel(gesture:)))
+        //let manualsTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapManualsLabel(gesture:)))
+        self.scrollDetails.addGestureRecognizer(singleTapGesture)
+        self.scrollDetails.addGestureRecognizer(doubleTapGesture)
+        self.scrollDetails.isUserInteractionEnabled = true
+        
         let menuItems = UIMenu(title: "", options: .displayInline, children: [
             
             //Overview Tab
             UIAction(title: MainString.What.localized, handler: { (_) in
                 self.scrollDetails.text = hfjvString.HFJV_what.localized
                 self.removeSubButtons()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = true
                 self.createOverview()
                 self.resizeScrollEmbeddedView()
             }),
@@ -132,14 +145,14 @@ class hfjvChild: UIViewController {
                 //self.checkPlayerVisibility(buttonText: label)
                 //self.clearCounts()
                 self.removeSubButtons()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = true
                 self.resizeScrollEmbeddedView()
             }),
             
             //Settings tab
             UIAction(title: MainString.Settings.localized, handler: { (_) in
                 self.scrollDetails.text = ""
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.removeSubButtons()
                 let tabText = MainString.Settings.localized
                 self.createSubButtons(buttonText: tabText)
@@ -151,20 +164,19 @@ class hfjvChild: UIViewController {
                 //self.menuButton.setTitle(MainString.Management.localized, for: .normal)
                 //let label = MainString.Management.localized
                 //self.checkPlayerVisibility(buttonText: label)
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 //self.resizeScrollEmbeddedView()
                 //self.clearCounts()
                 self.removeSubButtons()
                 let tabText = MainString.Management.localized
                 self.createSubButtons(buttonText: tabText)
-
             }),
             
             //Tips tab
             UIAction(title: MainString.Tips.localized, handler: { (_) in
                 self.scrollDetails.text = hfjvString.HFJV_tips.localized
                 self.removeSubButtons()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.resizeScrollEmbeddedView()
             }),
             
@@ -192,7 +204,7 @@ class hfjvChild: UIViewController {
                 
                 //self.clearCounts()
                 self.removeSubButtons()
-                self.scrollDetails.isUserInteractionEnabled = true
+                //self.scrollDetails.isUserInteractionEnabled = true
                 self.resizeScrollEmbeddedView()
             })
         ])
@@ -263,31 +275,43 @@ class hfjvChild: UIViewController {
     
     //Func: tapLabel
     @IBAction func tapLabel(gesture: UITapGestureRecognizer) {
-        
-        let linksString = hfjvString.HFJV_links.localized
-        //Setting up proper NSranges
-        let regex = try! NSRegularExpression(pattern: #"[^\n]+"#)
-        let matches = regex.matches(in: linksString, range: NSRange(linksString.startIndex..., in: linksString))
-        let ranges = matches.map { $0.range }
+        let string = self.scrollDetails.text
+        let tmp = string?.replacingOccurrences(of: "•", with: "")
 
-        //print(ranges)
-        //print(ranges[1].location, ranges[1].length)
+        ViewController.synthesizer.stopSpeaking(at: .immediate)
+        ViewController.utterance = AVSpeechUtterance(string: tmp!)
+        ViewController.synthesizer.speak(ViewController.utterance)
+        ViewController.synthesizer.pauseSpeaking(at: .word)
+    }
+    
+    //Func: tapManualsLabel
+    @IBAction func tapManualsLabel(gesture: UITapGestureRecognizer) {
         
-        //Checking whether any of the urls were pressed
-        if gesture.didTapAttributedTextInLabel(label: self.scrollDetails, inRange: NSRange(location: ranges[1].location, length: ranges[1].length)) {
-            print("Tapped targetRange1\n\n")
-            if let urlOpen = URL(string: hfjvString.Bunnell_manual.localized)
-            {
-                UIApplication.shared.open(urlOpen, options: [:])
+        let linksString = self.scrollDetails.text
+        if linksString == hfjvString.HFJV_links.localized
+        {
+            //Setting up proper NSranges
+            let regex = try! NSRegularExpression(pattern: #"[^\n]+"#)
+            let matches = regex.matches(in: linksString!, range: NSRange(linksString!.startIndex..., in: linksString!))
+            let ranges = matches.map { $0.range }
+            
+            //print(ranges)
+            //print(ranges[1].location, ranges[1].length)
+            
+            //Checking whether any of the urls were pressed
+            if gesture.didTapAttributedTextInLabel(label: self.scrollDetails, inRange: NSRange(location: ranges[1].location, length: ranges[1].length)) {
+                print("Tapped targetRange1\n\n")
+                if let urlOpen = URL(string: hfjvString.Bunnell_manual.localized)
+                {
+                    UIApplication.shared.open(urlOpen, options: [:])
+                }
+            } else if gesture.didTapAttributedTextInLabel(label: self.scrollDetails, inRange: NSRange(location: ranges[3].location, length: ranges[3].length)) {
+                print("Tapped targetRange2\n\n")
+                if let urlOpen = URL(string: hfjvString.Bunnell_video.localized)
+                {
+                    UIApplication.shared.open(urlOpen, options: [:])
+                }
             }
-        } else if gesture.didTapAttributedTextInLabel(label: self.scrollDetails, inRange: NSRange(location: ranges[3].location, length: ranges[3].length)) {
-            print("Tapped targetRange2\n\n")
-            if let urlOpen = URL(string: hfjvString.Bunnell_video.localized)
-            {
-                UIApplication.shared.open(urlOpen, options: [:])
-            }
-        } else {
-            print("Tapped none\n\n")
         }
     }
     

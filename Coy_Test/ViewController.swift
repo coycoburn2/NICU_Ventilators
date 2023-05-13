@@ -7,12 +7,15 @@
 
 import UIKit
 import youtube_ios_player_helper
-class ViewController: UIViewController {
+import AVFoundation
+
+class ViewController: UIViewController, UISearchBarDelegate {
     
         
     @IBOutlet weak var mainTitleButton: UIButton!
     @IBOutlet var disclaimerButton: UIButton!
     @IBOutlet var referencesButton: UIButton!
+    @IBOutlet var reviewButton: UIButton!
     @IBOutlet weak var bottomStackOptions: UIStackView!
     
     //Buttons for navitgating the decision tree
@@ -38,12 +41,33 @@ class ViewController: UIViewController {
     
     var prevButton = UIButton()
     
+    static var utterance = AVSpeechUtterance(string: MainString.app_name.localized)
+    static let synthesizer = AVSpeechSynthesizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Populating texts
         mainTitleButton.setTitle(MainString.app_name.localized, for: .normal)
         disclaimerButton.setTitle(MainString.Dis.localized, for: .normal)
         referencesButton.setTitle(MainString.referencesLabel.localized, for: .normal)
+        reviewButton.setTitle(MainString.Review.localized, for: .normal)
+        
+        //disclaimerButton.isAccessibilityElement = true
+        //referencesButton.isAccessibilityElement = true
+        //disclaimerButton.accessibilityTraits = UIAccessibilityTraits.button
+        //referencesButton.accessibilityTraits = UIAccessibilityTraits.button
+
+        
+        //disclaimerButton.accessibilityValue = MainString.Dis.localized
+        //referencesButton.accessibilityValue = MainString.referencesLabel.localized
+        
+        // Enable VoiceOver
+        //UIAccessibility.isVoiceOverRunning
+
+        // Activate the button with VoiceOver
+        //UIAccessibility.post(notification: .screenChanged, argument: disclaimerButton)
+        // Activate the button with VoiceOver
+        //UIAccessibility.post(notification: .screenChanged, argument: referencesButton)
         
         optionOne.setTitle(MainString.conVent.localized, for: .normal)
         optionTwo.setTitle(MainString.hfjv.localized, for: .normal)
@@ -65,6 +89,9 @@ class ViewController: UIViewController {
         //Except for Helper Intro
         //helperContainer.alpha = 1
         buildHelper()
+        
+        //ViewController.synthesizer.speak(ViewController.utterance)
+        //ViewController.synthesizer.pauseSpeaking(at: .word)
     }
     
     //Func: tapLabel
@@ -80,6 +107,8 @@ class ViewController: UIViewController {
         disclaimerButton?.removeFromSuperview()
         bottomStackOptions.removeArrangedSubview(referencesButton)
         referencesButton?.removeFromSuperview()
+        bottomStackOptions.removeArrangedSubview(reviewButton)
+        reviewButton?.removeFromSuperview()
         
         //stackOptions.addArrangedSubview(prevButton)
         helperContainer.alpha = 1
@@ -106,6 +135,8 @@ class ViewController: UIViewController {
         
         bottomStackOptions.insertArrangedSubview(disclaimerButton, at: 0)
         bottomStackOptions.insertArrangedSubview(referencesButton, at: 1)
+        bottomStackOptions.insertArrangedSubview(reviewButton, at: 2)
+        
         
     }
     
@@ -268,6 +299,8 @@ class ViewController: UIViewController {
     @IBAction func optionOnePressed(_ sender: UIButton) {
         
         let choice = sender.titleLabel?.text
+        //utterance = AVSpeechUtterance(string: choice!)
+        //synthesizer.speak(utterance)
         switch (choice)
         {
             case MainString.conVent.localized:
@@ -412,5 +445,13 @@ class ViewController: UIViewController {
             disContainer.alpha = 0
         }
     }
+    
+    @IBAction func reviewButtonPressed(_ sender: Any) {
+        if let urlOpen = URL(string: MainString.Survey_link.localized)
+        {
+            UIApplication.shared.open(urlOpen, options: [:])
+        }
+    }
+    
 }
 

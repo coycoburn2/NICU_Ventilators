@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import youtube_ios_player_helper
+import AVFoundation
 
 //If HFOV locals indexes are changed, update this macro
 let HFOV_SETTINGS_INDEX = 5
@@ -92,11 +93,17 @@ class hfovChild: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.resizeScrollEmbeddedView()
-        self.scrollDetails.isUserInteractionEnabled = false
+        //self.scrollDetails.isUserInteractionEnabled = false
     }
     
     func addMenuItems() -> UIMenu
     {
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapLabel(gesture:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapGesture)
+        self.scrollDetails.addGestureRecognizer(doubleTapGesture)
+        self.scrollDetails.isUserInteractionEnabled = true
+ 
         let menuItems = UIMenu(title: "", options: .displayInline, children: [
             
             //Overview Tab
@@ -104,7 +111,7 @@ class hfovChild: UIViewController{
                 self.scrollDetails.text = hfovString.HFOV_what.localized
                 self.removeSubButtons()
                 self.resetVideoTabs()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.resizeScrollEmbeddedView()
             }),
             
@@ -113,14 +120,14 @@ class hfovChild: UIViewController{
                 self.scrollDetails.text = hfovString.HFOV_when.localized
                 self.removeSubButtons()
                 self.resetVideoTabs()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.resizeScrollEmbeddedView()
             }),
             
             //Settings Tab
             UIAction(title: MainString.Settings.localized, handler: { (_) in
                 self.scrollDetails.text = ""
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.removeSubButtons()
                 self.resetVideoTabs()
                 let tabText = MainString.Settings.localized
@@ -130,7 +137,7 @@ class hfovChild: UIViewController{
             //Management Tab
             UIAction(title: MainString.Management.localized, handler: { (_) in
                 self.scrollDetails.text = ""
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.removeSubButtons()
                 self.resetVideoTabs()
                 let tabText = MainString.Management.localized
@@ -142,7 +149,7 @@ class hfovChild: UIViewController{
                 self.scrollDetails.text = hfovString.HFOV_tips.localized
                 self.removeSubButtons()
                 self.resetVideoTabs()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 self.resizeScrollEmbeddedView()
             }),
             
@@ -151,13 +158,24 @@ class hfovChild: UIViewController{
                 self.scrollDetails.text = ""
                 self.removeSubButtons()
                 self.resetVideoTabs()
-                self.scrollDetails.isUserInteractionEnabled = false
+                //self.scrollDetails.isUserInteractionEnabled = false
                 //self.resizeScrollEmbeddedView()
                 self.createVideos()
             })
         ])
         
         return menuItems
+    }
+    
+    //Func: tapLabel
+    @IBAction func tapLabel(gesture: UITapGestureRecognizer) {
+        let string = self.scrollDetails.text
+        let tmp = string?.replacingOccurrences(of: "•", with: "")
+
+        ViewController.synthesizer.stopSpeaking(at: .immediate)
+        ViewController.utterance = AVSpeechUtterance(string: tmp!)
+        ViewController.synthesizer.speak(ViewController.utterance)
+        ViewController.synthesizer.pauseSpeaking(at: .word)
     }
     
     func resizeScrollEmbeddedView()

@@ -66,6 +66,9 @@ enum MainString: String, CaseIterable {
     case helperLabel
     case helperBody
     
+    case Review
+    case Survey_link
+    
     var localized: String {
         NSLocalizedString(self.rawValue, comment: "")
     }
