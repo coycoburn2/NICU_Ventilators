@@ -43,7 +43,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     static var utterance = AVSpeechUtterance(string: MainString.app_name.localized)
     static let synthesizer = AVSpeechSynthesizer()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Populating texts
@@ -89,9 +89,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
         //Except for Helper Intro
         //helperContainer.alpha = 1
         buildHelper()
-        
-        //ViewController.synthesizer.speak(ViewController.utterance)
-        //ViewController.synthesizer.pauseSpeaking(at: .word)
     }
     
     //Func: tapLabel
